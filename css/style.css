@@ -393,3 +393,37 @@ footer{
     display:none !important;
   }
 }
+/* ================= DESKTOP NAV OVERRIDE v4 (FORCE VISIBLE CHANGE) ================= */
+@media (min-width: 861px){
+
+  .navlinks{
+    width: auto !important;
+    max-width: 720px !important;
+    overflow: hidden !important;          /* prevents running off the right edge */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 6px 10px !important;
+    padding: 10px !important;
+
+    background: rgba(255,255,255,.035) !important;
+    border: 1px solid rgba(255,255,255,.12) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 10px 26px rgba(0,0,0,.35) !important;
+  }
+
+  .navlinks a{
+    width: auto !important;
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+
+    padding: 6px 10px !important;
+    border-radius: 999px !important;
+    font-size: .82rem !important;
+    line-height: 1.1 !important;
+
+    border: 1px solid rgba(255,255,255,.10) !important;
+    background: rgba(255,255,255,.03) !important;
+  }
+}
