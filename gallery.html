@@ -2,36 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Photo Gallery | GeorgeHalas.com</title>
-  <meta name="description" content="A historical fan site about George S. Halas—founder of the Chicago Bears and early leader in the NFL." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery | GeorgeHalas.com</title>
+  <meta name="description" content="Historical photographs and images documenting the life and legacy of George Halas and the early Chicago Bears." />
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
 </head>
 <body>
 
 <header>
   <div class="container">
     <div class="navbar">
-      <a class="brand" href="index.html" aria-label="GeorgeHalas.com home">
-        <div class="brand-badge">GH</div>
+      <a class="brand" href="index.html">
+        <span class="brand-badge">GH</span>
         <span>GeorgeHalas.com</span>
       </a>
-
-      <button class="menu-btn" data-menu-btn aria-label="Toggle menu">
-        ☰ Menu
-      </button>
-
-      <nav class="navlinks" aria-label="Primary">
+      <button class="menu-btn" type="button">Menu</button>
+      <nav class="navlinks">
         <a href="index.html">Home</a>
-<a href="biography.html">Biography</a>
-<a href="early-life.html">Early Life & Illinois</a>
-<a href="founding-bears.html">Founding the Bears</a>
-<a href="coaching-innovation.html">Coaching & Innovation</a>
-<a href="championships.html">Championships Timeline</a>
-<a href="nfl-leadership.html">NFL Leadership</a>
-<a href="legacy-honors.html">Legacy & Honors</a>
-<a href="gallery.html">Photo Gallery</a>
-<a href="sources.html">Sources & Credits</a>
+        <a href="biography.html">Biography</a>
+        <a href="early-life.html">Early Life & Illinois</a>
+        <a href="founding-bears.html">Founding the Bears</a>
+        <a href="coaching-innovation.html">Coaching & Innovation</a>
+        <a href="championships.html">Championships</a>
+        <a href="nfl-leadership.html">NFL Leadership</a>
+        <a href="legacy-honors.html">Legacy & Honors</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="sources.html">Sources</a>
       </nav>
     </div>
   </div>
@@ -43,49 +40,110 @@
   <div class="card">
     <div class="card-pad">
       <div class="kicker">Gallery</div>
-      <h1>Public-domain / licensed photos</h1>
+      <h1>Images from the Halas era</h1>
       <p>
-        This gallery embeds images from Wikimedia Commons and other primary repositories (such as the Library of Congress).
-        Each image retains its original licensing and attribution—see <a href="sources.html">Sources & Credits</a>.
+        This gallery presents historical images associated with George Halas,
+        the Chicago Bears, and the early National Football League.
+        Images are selected for historical significance and educational context.
       </p>
     </div>
   </div>
 </section>
 
 <section class="grid">
-  <div class="col-12">
-    <div class="gallery" aria-label="Photo gallery">
-      <a href="https://commons.wikimedia.org/wiki/Special:FilePath/1922%20George%20Halas.jpg" data-lightbox data-cap="Wikimedia Commons file: 1922 George Halas.jpg" data-alt="1922 portrait">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/1922%20George%20Halas.jpg" alt="1922 portrait" loading="lazy" />
-  <div class="gcap"><b>1922 portrait</b><br/><span>Wikimedia Commons file: 1922 George Halas.jpg</span></div>
-</a>
-<a href="https://commons.wikimedia.org/wiki/Special:FilePath/George%20Halas%2C%20New%20York%20AL%20%28baseball%29%20LCCN2014708760.jpg" data-lightbox data-cap="Wikimedia Commons (LoC Bain collection)" data-alt="Baseball-era photo (Bain/LoC)">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/George%20Halas%2C%20New%20York%20AL%20%28baseball%29%20LCCN2014708760.jpg" alt="Baseball-era photo (Bain/LoC)" loading="lazy" />
-  <div class="gcap"><b>Baseball-era photo (Bain/LoC)</b><br/><span>Wikimedia Commons (LoC Bain collection)</span></div>
-</a>
-<a href="https://commons.wikimedia.org/wiki/Special:FilePath/George%20Halas%201950.jpg" data-lightbox data-cap="Wikimedia Commons file: George Halas 1950.jpg" data-alt="Halas (1950)">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/George%20Halas%201950.jpg" alt="Halas (1950)" loading="lazy" />
-  <div class="gcap"><b>Halas (1950)</b><br/><span>Wikimedia Commons file: George Halas 1950.jpg</span></div>
-</a>
-<a href="https://commons.wikimedia.org/wiki/Special:FilePath/George%20Halas%201952%20Bowman.jpg" data-lightbox data-cap="Wikimedia Commons file: George Halas 1952 Bowman.jpg" data-alt="1952 Bowman card image">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/George%20Halas%201952%20Bowman.jpg" alt="1952 Bowman card image" loading="lazy" />
-  <div class="gcap"><b>1952 Bowman card image</b><br/><span>Wikimedia Commons file: George Halas 1952 Bowman.jpg</span></div>
-</a>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-pad">
+        <h3>George Halas portrait</h3>
+        <p>
+          Classic portraits of Halas from his coaching and ownership years,
+          reflecting the public image of “Papa Bear.”
+        </p>
+        <p><em>Source: Public domain / Wikimedia Commons</em></p>
+      </div>
     </div>
-    <p class="muted" style="margin-top:12px">
-      Tip: Click a photo to open a larger view. Press <b>Esc</b> to close.
-    </p>
   </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-pad">
+        <h3>Early Chicago Bears teams</h3>
+        <p>
+          Team photographs from the 1920s and 1930s, documenting the Bears’
+          transformation from a relocated company team into a league cornerstone.
+        </p>
+        <p><em>Source: Public domain / Wikimedia Commons</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-pad">
+        <h3>Sid Luckman and the T-formation</h3>
+        <p>
+          Images capturing the Bears’ innovative offense that reshaped
+          professional football during the 1940 championship era.
+        </p>
+        <p><em>Source: Public domain / Wikimedia Commons</em></p>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <section class="grid">
-  <div class="col-12 card">
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-pad">
+        <h3>Championship moments</h3>
+        <p>
+          Photographs from key championship games, including the
+          historic 1940 and 1963 title runs.
+        </p>
+        <p><em>Source: Public domain / Wikimedia Commons</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-pad">
+        <h3>Halas on the sideline</h3>
+        <p>
+          Images of Halas coaching across decades, illustrating his longevity
+          and adaptability as the game evolved.
+        </p>
+        <p><em>Source: Public domain / Wikimedia Commons</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-pad">
+        <h3>NFL legacy imagery</h3>
+        <p>
+          Photographs highlighting Halas’s influence on league leadership,
+          including Hall of Fame recognition and the NFC Championship Trophy.
+        </p>
+        <p><em>Source: Public domain / Wikimedia Commons</em></p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="hero">
+  <div class="card">
     <div class="card-pad">
-      <h2>More official photo collections</h2>
-      <ul class="list">
-        <li><a href="https://www.nfl.com/photos/george-halas-through-the-years-0ap1000000103263" target="_blank" rel="noopener">NFL.com — “George Halas Through the Years”</a> (Associated Press & NFL archives; licensing varies).</li>
-        <li><a href="https://www.loc.gov/resource/ds.14144/" target="_blank" rel="noopener">Library of Congress — “Passes in prospect” (1939)</a> captioned photo with Halas and Sid Luckman.</li>
-      </ul>
+      <p>
+        Image links can be added or replaced over time as additional
+        public-domain materials become available.
+        All images used should comply with public-domain or licensed usage.
+      </p>
     </div>
   </div>
 </section>
@@ -94,14 +152,9 @@
 
 <footer>
   <div class="container">
-    <div class="sep"></div>
-    <p style="margin:0">
-      © 2026 GeorgeHalas.com. Educational, historical fan site about George S. Halas.
-      Photos are embedded from their original sources with attribution—see <a href="sources.html">Sources & Credits</a>.
-    </p>
+    <div>© 2026 GeorgeHalas.com • Educational historical archive</div>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
 </body>
 </html>
