@@ -1,56 +1,81 @@
-// main.js — bulletproof mobile menu (works even if CSS is cached or conflicting)
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.querySelector(".menu-btn");
-  const nav = document.querySelector(".navlinks");
-  if (!btn || !nav) return;
-
-  // Start hidden on small screens (safe)
-  function syncInitial() {
-    if (window.innerWidth <= 860) {
-      // If CSS is hiding it, keep it hidden until opened
-      if (!nav.classList.contains("open")) nav.style.display = "none";
+// main.js — FINAL, bulletproof mobile navigation for GeorgeHalas.com
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") {
+      fn();
     } else {
-      // Desktop always visible
-      nav.style.display = "";
-      nav.classList.remove("open");
+      document.addEventListener("DOMContentLoaded", fn);
     }
   }
 
-  function toggleMenu() {
-    const isOpen = nav.classList.contains("open") || nav.style.display === "block";
-    if (isOpen) {
-      nav.classList.remove("open");
+  ready(function () {
+    var btn = document.querySelector(".menu-btn");
+    var nav = document.querySelector(".navlinks");
+
+    if (!btn || !nav) return;
+
+    // Force predictable base state
+    btn.setAttribute("type", "button");
+    btn.style.cursor = "pointer";
+
+    function isMobile() {
+      return window.innerWidth <= 860;
+    }
+
+    function closeMenu() {
       nav.style.display = "none";
       btn.setAttribute("aria-expanded", "false");
-    } else {
-      nav.classList.add("open");
+    }
+
+    function openMenu() {
       nav.style.display = "block";
       btn.setAttribute("aria-expanded", "true");
     }
-  }
 
-  // Accessibility
-  btn.setAttribute("type", "button");
-  btn.setAttribute("aria-expanded", "false");
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
 
-  // Click + touch (Chrome mobile can be picky; touchstart makes it deterministic)
-  btn.addEventListener("click", toggleMenu);
-  btn.addEventListener("touchstart", function (e) {
-    e.preventDefault();
-    toggleMenu();
-  }, { passive: false });
+      if (!isMobile()) return;
 
-  // Close after clicking a link (nice mobile UX)
-  nav.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      if (window.innerWidth <= 860) {
-        nav.classList.remove("open");
-        nav.style.display = "none";
-        btn.setAttribute("aria-expanded", "false");
+      if (nav.style.display === "block") {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    // Initial state
+    if (isMobile()) {
+      closeMenu();
+    } else {
+      nav.style.display = "block";
+    }
+
+    // CLICK + TOUCH (Chrome mobile fix)
+    btn.addEventListener("click", toggleMenu, true);
+    btn.addEventListener(
+      "touchstart",
+      function (e) {
+        toggleMenu(e);
+      },
+      { passive: false }
+    );
+
+    // Close menu when link is tapped
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (isMobile()) closeMenu();
+      });
+    });
+
+    // Handle resize
+    window.addEventListener("resize", function () {
+      if (isMobile()) {
+        closeMenu();
+      } else {
+        nav.style.display = "block";
       }
     });
   });
-
-  window.addEventListener("resize", syncInitial);
-  syncInitial();
-});
+})();
