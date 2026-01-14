@@ -331,3 +331,65 @@ footer{
   /* Make sure the hamburger is not showing on desktop */
   .menu-btn{ display: none !important; }
 }
+/* ================= DESKTOP NAV — WRAPPING BAND FIX ================= */
+@media (min-width: 861px){
+
+  /* Header row stays stable */
+  .navbar{
+    align-items: flex-start !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Navigation becomes a centered, wrapping band */
+  .navlinks{
+    display: flex !important;
+    flex-wrap: wrap !important;          /* KEY: allow wrapping */
+    justify-content: center !important;  /* center rows */
+    align-items: center !important;
+
+    max-width: 720px;                    /* prevents run-off */
+    margin-left: auto !important;
+    margin-right: 0 !important;
+
+    gap: 6px 10px !important;            /* row / column gap */
+    padding: 10px !important;
+
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  }
+
+  /* Links become compact chips (NOT full cells) */
+  .navlinks a{
+    display: inline-block !important;
+    width: auto !important;
+
+    padding: 6px 10px !important;        /* tighter */
+    border-radius: 999px !important;     /* pill, not box */
+
+    font-size: .82rem !important;        /* smaller text */
+    font-weight: 650 !important;
+    letter-spacing: .02em !important;
+    line-height: 1.1 !important;
+
+    white-space: nowrap !important;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.03);
+  }
+
+  .navlinks a:hover{
+    background: rgba(245,158,11,.12);
+    border-color: rgba(245,158,11,.35);
+  }
+
+  .navlinks a.active{
+    background: rgba(245,158,11,.18);
+    border-color: rgba(245,158,11,.55);
+  }
+
+  /* Never show hamburger on desktop */
+  .menu-btn{
+    display:none !important;
+  }
+}
