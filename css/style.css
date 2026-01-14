@@ -427,3 +427,19 @@ footer{
     background: rgba(255,255,255,.03) !important;
   }
 }
+/* --- Mobile menu: show/hide nav when Menu is tapped --- */
+@media (max-width: 860px) {
+  .navlinks { 
+    display: none !important; 
+    width: 100%;
+  }
+
+  .navlinks.open { 
+    display: block !important; 
+  }
+
+  .navlinks a {
+    display: block;
+    padding: 12px 10px;
+  }
+}
