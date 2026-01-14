@@ -443,3 +443,5 @@ footer{
     padding: 12px 10px;
   }
 }
+/* Make sure the Menu button is actually tappable in Chrome */
+.menu-btn { position: relative; z-index: 9999; pointer-events: auto; }
