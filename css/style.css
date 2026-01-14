@@ -445,3 +445,21 @@ footer{
 }
 /* Make sure the Menu button is actually tappable in Chrome */
 .menu-btn { position: relative; z-index: 9999; pointer-events: auto; }
+@media (max-width: 860px) {
+  .navlinks {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-btn {
+    position: relative;
+    z-index: 999999;
+    pointer-events: auto;
+  }
+
+  header,
+  .navbar {
+    position: relative;
+    z-index: 999998;
+  }
+}
