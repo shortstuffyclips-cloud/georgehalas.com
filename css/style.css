@@ -268,3 +268,60 @@ footer{
   color:var(--muted);
   background:rgba(11,15,20,.85);
 }
+/* ================= DESKTOP NAV – ANTIQUE STYLE ================= */
+
+@media (min-width: 861px){
+
+  .navlinks{
+    display:flex !important;
+    gap:0;
+    align-items:center;
+    border:1px solid rgba(27,26,23,.25);
+    background:
+      linear-gradient(180deg, rgba(243,234,214,.96), rgba(234,220,192,.96));
+    border-radius:14px;
+    padding:4px;
+    box-shadow:
+      inset 0 0 0 1px rgba(176,141,55,.25),
+      0 10px 30px rgba(0,0,0,.25);
+  }
+
+  .navlinks a{
+    font-family: var(--title);
+    font-size:.9rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:10px 14px;
+    border-radius:10px;
+    border:none;
+    color:var(--ink);
+    position:relative;
+  }
+
+  .navlinks a:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:25%;
+    height:50%;
+    width:1px;
+    background:rgba(27,26,23,.25);
+  }
+
+  .navlinks a:hover{
+    background:rgba(176,141,55,.18);
+    color:#000;
+  }
+
+  .navlinks a.active{
+    background:
+      linear-gradient(180deg, rgba(176,141,55,.35), rgba(176,141,55,.18));
+    box-shadow:
+      inset 0 0 0 1px rgba(176,141,55,.6);
+    color:#000;
+  }
+
+  .menu-btn{
+    display:none !important;
+  }
+}
