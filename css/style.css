@@ -440,3 +440,66 @@ footer{
   /* Hamburger should not show on desktop */
   .menu-btn{ display:none !important; }
 }
+/* ================= LIGHTER ANTIQUE BACKGROUND OVERRIDE ================= */
+/* Paste at END of css/style.css */
+
+:root{
+  --paper1:#f6edd8;
+  --paper2:#eadbbd;
+  --ink:#1a1916;
+  --inkSoft:#3b362d;
+  --cardLight: rgba(255,255,255,.70);
+  --borderDark: rgba(26,25,22,.18);
+}
+
+/* Page background */
+body{
+  background:
+    radial-gradient(1200px 800px at 20% 0%, rgba(176,141,55,.18), transparent 55%),
+    radial-gradient(900px 700px at 85% 15%, rgba(122,59,46,.12), transparent 55%),
+    linear-gradient(180deg, var(--paper1), var(--paper2)) !important;
+  color: var(--ink) !important;
+}
+
+/* Make text readable on light background */
+p, .list li{ color: var(--inkSoft) !important; }
+.muted, .kicker, small{ color: rgba(59,54,45,.75) !important; }
+
+/* Cards become “document panels” */
+.card{
+  background: var(--cardLight) !important;
+  border: 1px solid var(--borderDark) !important;
+  box-shadow: 0 14px 38px rgba(0,0,0,.18) !important;
+}
+
+/* Header matches the paper look */
+header{
+  background: rgba(246,237,216,.92) !important;
+  border-bottom: 1px solid var(--borderDark) !important;
+}
+
+/* Nav text + plaque tuned for light theme */
+.navlinks{
+  background: rgba(255,255,255,.55) !important;
+  border: 1px solid var(--borderDark) !important;
+}
+.navlinks a{
+  color: var(--ink) !important;
+}
+.navlinks a:hover{
+  background: rgba(176,141,55,.18) !important;
+  border-color: rgba(176,141,55,.35) !important;
+}
+.navlinks a.active{
+  background: rgba(176,141,55,.22) !important;
+  border-color: rgba(176,141,55,.55) !important;
+}
+
+/* Buttons on light background */
+.btn{
+  background: rgba(255,255,255,.55) !important;
+  border: 1px solid var(--borderDark) !important;
+  color: var(--ink) !important;
+}
+.btn.primary{
+  background: rgba(176,141,55,.22) !important;
