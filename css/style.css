@@ -325,3 +325,52 @@ footer{
     display:none !important;
   }
 }
+/* ==========================================================
+   DESKTOP NAV FIX v2 — makes top nav look premium on desktop
+   Paste at END of css/style.css
+   ========================================================== */
+
+@media (min-width: 861px){
+
+  /* Hide the hamburger button on desktop */
+  .menu-btn{ display:none !important; }
+
+  /* Force nav to stay visible on desktop */
+  .navlinks{
+    display:flex !important;
+    align-items:center;
+    gap:6px !important;
+
+    /* “Museum plaque” container */
+    padding:6px !important;
+    border-radius:16px !important;
+
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)) !important;
+    border: 1px solid rgba(255,255,255,.16) !important;
+    box-shadow: 0 10px 26px rgba(0,0,0,.35) !important;
+  }
+
+  /* Make links look like pills/tabs instead of raw text */
+  .navlinks a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    padding:10px 12px !important;
+    border-radius:12px !important;
+
+    text-decoration:none !important;
+    border: 1px solid transparent !important;
+
+    font-weight:700 !important;
+    font-size:.92rem !important;
+    letter-spacing:.02em !important;
+
+    color: rgba(229,231,235,.95) !important;
+    background: transparent !important;
+    white-space:nowrap !important;
+  }
+
+  .navlinks a:hover{
+    background: rgba(245,158,11,.14) !important;
+    border-color: rgba(245,158,11,.35) !important
